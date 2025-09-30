@@ -46,7 +46,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-robot"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Chanofficial</div>
+                <div class="sidebar-brand-text mx-3">KITA KAKTUS</div>
             </a>
 
             <!-- Divider -->

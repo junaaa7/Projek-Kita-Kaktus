@@ -20,14 +20,14 @@
     <!------favicon------>
     <link rel="shortcut icon" href="">
     <!---------------------------------------->
-    <title>TIMER.id</title>
+    <title>KITA KAKTUS</title>
   </head>
   <body>
     <!------ navbar------->
     <section class="nav-navbar fixed-top  bg-light">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html">TIMER.id</a>
+        <a class="navbar-brand" href="index.html">KITA KAKTUS</a>
         <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
