@@ -61,7 +61,7 @@
                   <img class="d-block w-100" src="./assets/img/dasboard (2).jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="./assets/img/img-2.png" alt="Third slide">
+                  <img class="d-block w-100" src="./assets/img/dasboard.jpeg" alt="Third slide">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -85,7 +85,7 @@
                         </div>
                       </div>
                       <div class="col-md-4 col-3">
-                      <img src="./assets/img/pria.png" class="img-fluid" alt="Responsive image">
+                      <img src="./assets/img/kaktus (5).png" class="img-fluid" alt="Responsive image">
                       </div>
                     </div>
                   </div>
@@ -143,49 +143,16 @@
           <div class="row mb-4">
               <div class="col-lg-9 sec-2 mt-5">
                 <h2>About Us</h2>
-                  <p>Timer.id adalah website e-commerce dibidang jam pertama di Indonesia, Kami berdiri sejak tahun 2020 dan fokus pada produk dengan kualitas terbaik dan tampilan yang inovasi. menawarkan kebutuhan fashion pria dan wanita yang fokus pada jam tangan original. Kami menyediakan 40+ merk jam tangan branded asli untuk pria dan wanita yang berkualitas dan juga terjamin oleh toko kami yang dapat di beli secara online. <br></p>
+                  <p>Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2020 dengan fokus pada pengembangan dan penjualan berbagai jenis kaktus dan sukulen berkualitas. Berawal dari kecintaan pada tanaman unik yang tahan banting dan memiliki karakter estetis tinggi, kami berkomitmen menghadirkan koleksi kaktus terbaik untuk pecinta tanaman di seluruh Indonesia.
+                    Kami menyediakan ratusan jenis kaktus mulai dari bibit, tanaman mini, hingga koleksi unik untuk dekorasi rumah, kantor, kafe, hingga hadiah spesial. Seluruh tanaman kami dirawat secara profesional, ditanam di media yang sehat, dan dipilih dengan teliti sebelum dikirim ke pelanggan. <br></p>
               </div>
               <div class="col-lg-3">
-                <img src="assets/icon/icon.png" alt="logo" class="img-fluid">
+                <img src="assets/icon/logo.jpg" alt="logo" class="img-fluid">
               </div>
           </div>
       </div>
     </section>
-    <!------------- product ------------------->
-    <section class="brand mt-5 bg-custom">
-      <div class="container">
-        <div class="row text-center pb-5 pt-2">
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-              <img src="./assets/icon/casio.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-              <img src="./assets/icon/rolex.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-              <img src="./assets/icon/citizen.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 mt-3">
-            <div class="card">
-              <div class="card-body">
-              <img src="./assets/icon/tissot.png" width="80px" class="img-fluid" alt="Responsive image">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
     <!------------- product ------------------->
     <section class="quote bg-white">
       <div class="container">
@@ -227,6 +194,43 @@
         </div>
       </div>
     </section>
+
+    <!------------- product ------------------->
+    <section class="brand mt-5 bg-custom">
+      <div class="container">
+        <div class="row text-center pb-5 pt-2">
+          <div class="col-6 col-lg-3 mt-3">
+            <div class="card">
+              <div class="card-body">
+              <img src="./assets/icon/logo-tiktok.png" width="80px" class="img-fluid" alt="Responsive image">
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mt-3">
+            <div class="card">
+              <div class="card-body">
+              <img src="./assets/icon/logo-shopee.png" width="80px" class="img-fluid" alt="Responsive image">
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mt-3">
+            <div class="card">
+              <div class="card-body">
+              <img src="./assets/icon/logo-wa.png" width="80px" class="img-fluid" alt="Responsive image">
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mt-3">
+            <div class="card">
+              <div class="card-body">
+              <img src="./assets/icon/tissot.png" width="80px" class="img-fluid" alt="Responsive image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!------------- footer ------------------->
     <div class="footer bg-custom">  
       <div class="card-footer text-white text-center ">

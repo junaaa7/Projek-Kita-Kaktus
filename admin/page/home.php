@@ -44,7 +44,6 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-robot"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">KITA KAKTUS</div>
             </a>
@@ -163,7 +162,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             <footer class="sticky-footer bg-white" >
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; <a href="https://fajar-dev.my.id">Fajar-Dev</a> 2020</span>
+                        <span>Copyright &copy; 2025 KITA KAKTUS</span>
                     </div>
                 </div>
             </footer>
