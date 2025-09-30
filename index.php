@@ -233,7 +233,7 @@
         <div class="container">
           <div class="row"> 
             <div class="col-sm-12 pt-3 pb-3">
-              <span><a href="https://fajar-dev.my.id">FAJAR-DEV</a> &copy; 2020. All Rights Reserved.</span>
+              <span>&copy; 2025. KITA KAKTUS.</span>
             </div>
           </div>
         </div>
