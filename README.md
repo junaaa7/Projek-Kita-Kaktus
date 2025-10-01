@@ -10,6 +10,8 @@
 
 asjsadas
 
+tai lu semuaa
+
 ## catatan
 besifat open source, bebas diubah. tapi jangan ngaku ngaku punya elu
 ada pertanyaan hub wa: 0895611024559(fajar)
