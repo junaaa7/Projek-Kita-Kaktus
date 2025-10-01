@@ -158,8 +158,9 @@
       <div class="container">
           <div class="row">
               <div class="col-md-12 text-center">
-                <h1>catch your own stylish & look</h1>
-                <p>-Timer.id</p>
+                <h1>Sharp look, gentle heart. Style as unique as a rare cactus.</h1>
+                <p>Kita.Kaktus
+                </p>
               </div>
           </div>
       </div>

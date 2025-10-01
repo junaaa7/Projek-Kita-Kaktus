@@ -59,12 +59,8 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id`, `gambar`, `nama`, `harga`, `wa`) VALUES
-(2, '563-424-658-25.jpg', 'lorem ipsum', '-', '-'),
-(3, '20-725-25.jpg', 'lorem ipsum', '-', '-'),
-(4, '196-725-25.jpg', 'lorem ipsum', '-', '-'),
-(6, '258-563-424-658-25.jpg', 'lorem ipsum', 'Rp. 20.000', '+62895611024559'),
-(7, '461-468-424-658-25.jpg', 'lorem ipsum', 'Rp. 20.000', '+62895611024559');
-
+(8, '962-kaktus (1).jpg', '1', '5000', '+6212752132'),
+(9, '932-kaktus (2).jpg', '2', '5000', '+6212752132');
 --
 -- Indexes for dumped tables
 --
