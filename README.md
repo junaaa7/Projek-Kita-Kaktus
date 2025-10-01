@@ -17,7 +17,7 @@ ada pertanyaan hub wa: 0895611024559(fajar)
 ### kredit
 Dev. Fajar Rivaldi Chan | Powered By Chanofficial
 
-![image](https://user-images.githubusercontent.com/69442735/104312503-45db5200-5509-11eb-9be9-c8c6960893b8.png)
+![image](https://github.com/user-attachments/assets/5e525f13-82eb-4d33-944c-da23bab44a6b.png)
 ![image](https://user-images.githubusercontent.com/69442735/104312597-67d4d480-5509-11eb-99eb-4c38f5633b21.png)
 landing page
 
