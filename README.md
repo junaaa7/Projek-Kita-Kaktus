@@ -8,7 +8,7 @@
 2. bootstrap 4
 2. theme admin by sbadmin2 + sweetalert2
 
-asjsadas
+tai lu
 
 ## catatan
 besifat open source, bebas diubah. tapi jangan ngaku ngaku punya elu
