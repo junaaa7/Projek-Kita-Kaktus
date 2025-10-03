@@ -211,7 +211,7 @@
           <div class="col-6 col-lg-3 mt-3">
             <div class="card">
               <div class="card-body">
-                
+                <a href="https://shopee.co.id/kita_kaktus" target="_blank">Shopee</a>
               <img src="./assets/icon/logo-shopee.png" width="80px" class="img-fluid" alt="Responsive image">
               </div>
             </div>
