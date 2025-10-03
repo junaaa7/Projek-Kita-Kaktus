@@ -95,7 +95,7 @@
                     <div class="row">
                       <div class="col-md-8   col-9">
                         <div class="card-body">
-                          Woman
+                          Monacantha
                         </div>
                       </div>
                       <div class="col-md-4 col-3">
