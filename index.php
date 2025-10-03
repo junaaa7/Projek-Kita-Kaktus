@@ -109,7 +109,7 @@
                     <div class="row">
                       <div class="col-md-8 col-9">
                         <div class="card-body">
-                          All Genders
+                          Euphorbia
                         </div>
                       </div>
                       <div class="col-md-4 col-3">
@@ -123,7 +123,7 @@
                     <div class="row">
                       <div class="col-md-8 col-9">
                         <div class="card-body">
-                          Children
+                          Mammillaria
                         </div>
                       </div>
                       <div class="col-md-4 col-3">
