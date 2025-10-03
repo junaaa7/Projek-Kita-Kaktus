@@ -142,9 +142,9 @@
       <div class="container">
           <div class="row mb-4">
               <div class="col-lg-9 sec-2 mt-5">
-                <h2>About Us</h2>
-                  <p>Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2020 dengan fokus pada pengembangan dan penjualan berbagai jenis kaktus dan sukulen berkualitas. Berawal dari kecintaan pada tanaman unik yang tahan banting dan memiliki karakter estetis tinggi, kami berkomitmen menghadirkan koleksi kaktus terbaik untuk pecinta tanaman di seluruh Indonesia.
-                    Kami menyediakan ratusan jenis kaktus mulai dari bibit, tanaman mini, hingga koleksi unik untuk dekorasi rumah, kantor, kafe, hingga hadiah spesial. Seluruh tanaman kami dirawat secara profesional, ditanam di media yang sehat, dan dipilih dengan teliti sebelum dikirim ke pelanggan. <br></p>
+                <h2>About us Cactus</h2>
+                  <p>Kaktus adalah salah satu anggota famili Cactaceae yang sangat khas karena dapat hidup lama tanpa air. Habitat Kaktus ada di daerah gurun, padang rumput kering atau wilayah yang panas.
+Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2024. Fokus pada pengembangan dan penjualan berbagai jenis Kaktus dan Sekulen yang berkualitas. Kami berkomitmen menghadirkan Koleksi Kaktus terbaik untuk pecinta tanaman di Indonesia. Kami menyediakan puluhan jenis kaktus mulai dari bibit, media tanam, pot, topping tanaman, … seluruh tanaman kami di rawat secara profesional … ditanam di media yang sehat dan dipilih dengan teliti sebelum dikirim ke customer. Untuk pengiriman bisa untuk keseluruhan Indonesia.<br></p>
               </div>
               <div class="col-lg-3">
                 <img src="assets/icon/logo.jpg" alt="logo" class="img-fluid">
