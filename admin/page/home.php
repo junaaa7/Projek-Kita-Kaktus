@@ -44,6 +44,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon rotate-n-15">
+                   <i class="fas fa-seedling" style="color:green; font-size:2rem;"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">KITA KAKTUS</div>
             </a>

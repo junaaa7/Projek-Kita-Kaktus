@@ -33,6 +33,8 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
     <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 </head>
 
@@ -45,12 +47,15 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">TIMING.id</div>
-            </a>
+           <a class="sidebar-brand d-flex align-items-center justify-content-center">
+    <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-tree" style="color:green; font-size:2rem;"></i>
+
+    </div>
+    <div class="sidebar-brand-text mx-3">KITA KAKTUS</div>
+</a>
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
