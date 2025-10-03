@@ -228,8 +228,8 @@
             <div class="card">
               <div class="card-body">
                 <a href="https://maps.app.goo.gl/JoJiboW7GciMEWcs5" target="_blank">
-  Lihat di Google Maps
-</a>
+                         Lihat di Google Maps
+                </a>
 
               <img src="./assets/icon/rumah.png" width="80px" class="img-fluid" alt="Responsive image">
               </div>
