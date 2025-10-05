@@ -133,14 +133,14 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Poduk</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Produk</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col-md-10">
-                                    <h6 class="m-0 font-weight-bold text-primary pt-2">etalase</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary pt-2">Etalase</h6>
                                 </div>
                                 <div class="col-md-2">
                                     <button type="button" class="btn btn-info btn-icon-split pull-right" data-toggle="modal" data-target="#tambah_produk">
