@@ -6,6 +6,61 @@ if(!isset($_SESSION['username'])) {
 }
 require '../../db/koneksi.php';
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+// ====== Safety queries: hanya jalankan jika tabel ada ======
+function table_exists($koneksi, $table) {
+    $res = @mysqli_query($koneksi, "SHOW TABLES LIKE '".mysqli_real_escape_string($koneksi,$table)."'");
+    return ($res && mysqli_num_rows($res) > 0);
+}
+
+function safe_count($koneksi, $table) {
+    if (!table_exists($koneksi, $table)) return 0;
+    $q = @mysqli_query($koneksi, "SELECT COUNT(*) as total FROM `".$table."`");
+    if ($q) {
+        $r = mysqli_fetch_assoc($q);
+        return (int)$r['total'];
+    }
+    return 0;
+}
+
+function safe_sum($koneksi, $table, $col, $where='1') {
+    if (!table_exists($koneksi, $table)) return 0;
+    $q = @mysqli_query($koneksi, "SELECT SUM($col) as total FROM `".$table."` WHERE $where");
+    if ($q) {
+        $r = mysqli_fetch_assoc($q);
+        return (float)$r['total'];
+    }
+    return 0;
+}
+
+// ambil statistik (aman)
+$dataProduk     = safe_count($koneksi, 'produk');
+$dataPesanan    = safe_count($koneksi, 'pesanan');
+$dataUser       = safe_count($koneksi, 'users');
+$dataPendapatan = safe_sum($koneksi, 'pesanan', 'total_harga', "status='selesai'");
+
+// ambil data chart (jika tabel pesanan ada)
+$penjualanBulan = array_fill(1, 12, 0);
+if (table_exists($koneksi, 'pesanan')) {
+    $qChart = mysqli_query($koneksi, "
+        SELECT MONTH(tanggal) as bulan, SUM(total_harga) as total
+        FROM pesanan
+        WHERE status='selesai'
+        GROUP BY MONTH(tanggal)
+    ");
+    if ($qChart) {
+        while ($r = mysqli_fetch_assoc($qChart)) {
+            $penjualanBulan[(int)$r['bulan']] = (float)$r['total'];
+        }
+    }
+    $qChart = mysqli_query($koneksi, "
+    SELECT MONTH(tanggal) as bulan, SUM(total_harga) as total
+    FROM pesanan
+    WHERE status='selesai' 
+      AND YEAR(tanggal) = YEAR(CURDATE())
+    GROUP BY MONTH(tanggal)
+");
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +118,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                 <i class="fas fa-code"></i>
                     <span>Produk</span></a>
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="../logout.php">
                 <i class="fas fa-sign-out-alt"></i>
@@ -129,41 +185,43 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
     <!-- Statistik Cards -->
     <div class="row">
         <!-- Card Produk -->
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-primary text-white mb-4">
-                <div class="card-body">Produk: <?php echo $dataProduk['total']; ?></div>
-            </div>
-        </div>
+<div class="col-xl-3 col-md-6">
+    <div class="card bg-primary text-white mb-4">
+        <div class="card-body">Produk: <?= $dataProduk ?></div>
+    </div>
+</div>
 
-        <!-- Card Pesanan -->
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-success text-white mb-4">
-                <div class="card-body">Pesanan: <?php echo $dataPesanan['total']; ?></div>
-            </div>
-        </div>
+<!-- Card Pesanan -->
+<div class="col-xl-3 col-md-6">
+    <div class="card bg-success text-white mb-4">
+        <div class="card-body">Pesanan: <?= $dataPesanan ?></div>
+    </div>
+</div>
 
-        <!-- Card User -->
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-warning text-white mb-4">
-                <div class="card-body">User: <?php echo $dataUser['total']; ?></div>
-            </div>
-        </div>
+<!-- Card User -->
+<div class="col-xl-3 col-md-6">
+    <div class="card bg-warning text-white mb-4">
+        <div class="card-body">User: <?= $dataUser ?></div>
+    </div>
+</div>
 
-        <!-- Card Pendapatan -->
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-danger text-white mb-4">
-                <div class="card-body">
-                    Pendapatan: Rp <?php echo number_format($dataPendapatan['total']); ?>
-                </div>
-            </div>
+<!-- Card Pendapatan -->
+<div class="col-xl-3 col-md-6">
+    <div class="card bg-danger text-white mb-4">
+        <div class="card-body">
+            Pendapatan: Rp <?= number_format($dataPendapatan, 0, ',', '.') ?>
         </div>
+    </div>
+</div>
+
     </div>
 
     <!-- Grafik Penjualan -->
     <div class="card mb-4">
         <div class="card-header">
-            <i class="fas fa-chart-bar me-1"></i>
-            Grafik Penjualan Bulanan
+           <h6 class="m-0 font-weight-bold text-primary">
+                Grafik Penjualan Bulanan (<?php echo date('Y'); ?>)
+            </h6>
         </div>
         <div class="card-body">
             <canvas id="chartPenjualan"></canvas>
@@ -201,41 +259,6 @@ var chart = new Chart(ctx, {
     }
 });
 </script>
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
-
-                    <div class="row">
-                        
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Produk</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <?php
-                                                    $sqli = "SELECT * FROM produk";
-                                                    $query = $koneksi->query($sqli);
-                                                    echo $query->num_rows;
-                                                ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                        <i class="fas fa-code fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white" >
