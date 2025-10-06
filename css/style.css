@@ -66,7 +66,7 @@ hr {
 	margin-bottom: 10px;
 }
 .about {
-	text-align: center;
+	text-align: justify;
 }
 .about img {
 	border-radius: 100%;
@@ -83,6 +83,7 @@ hr {
 }
 
 .quote p {
+	text-align: justify;
 	color: #909090;
 	font-size: 18px;
 	font-family: 'poppins', sans-serif;
