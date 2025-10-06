@@ -202,25 +202,25 @@ Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2024. Fokus pada 
         <div class="row text-center pb-5 pt-2">
           <div class="col-6 col-lg-3 mt-3">
             <div class="card">
-              <div class="card-body">
-                <a href="https://www.tiktok.com/@kitakaktus" target="_blank">TikTok</a>
-              <img src="./assets/icon/logo-tiktok.png" width="80px" class="img-fluid" alt="Responsive image">
+              <div class="card-body text-center">
+                <a href="https://www.tiktok.com/@kitakaktus" target="_blank">
+                  <img src="./assets/icon/logo-tiktok.png" width="80px" class="img-fluid" alt="TikTok Logo">
               </div>
             </div>
           </div>
           <div class="col-6 col-lg-3 mt-3">
             <div class="card">
               <div class="card-body">
-                <a href="https://shopee.co.id/kita_kaktus" target="_blank">Shopee</a>
-              <img src="./assets/icon/logo-shopee.png" width="80px" class="img-fluid" alt="Responsive image">
+                <a href="https://shopee.co.id/kita_kaktus" target="_blank">
+              <img src="./assets/icon/logo-shopee.png" width="80px" class="img-fluid" alt="Shopee Logo">
               </div>
             </div>
           </div>
           <div class="col-6 col-lg-3 mt-3">
             <div class="card">
               <div class="card-body">
-                <a href="https://wa.me/6287871797367" target="_blank">WhatsApp</a>
-              <img src="./assets/icon/logo-wa.png" width="80px" class="img-fluid" alt="Responsive image">
+                <a href="https://wa.me/6287871797367" target="_blank">
+              <img src="./assets/icon/logo-wa.png" width="80px" class="img-fluid" alt="WhatApps Logo">
               </div>
             </div>
           </div>
@@ -228,10 +228,7 @@ Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2024. Fokus pada 
             <div class="card">
               <div class="card-body">
                 <a href="https://maps.app.goo.gl/JoJiboW7GciMEWcs5" target="_blank">
-                         Maps
-                </a>
-
-              <img src="./assets/icon/rumah.png" width="80px" class="img-fluid" alt="Responsive image">
+              <img src="./assets/icon/rumah.png" width="80px" class="img-fluid" alt="Maps Logo">
               </div>
             </div>
           </div>
