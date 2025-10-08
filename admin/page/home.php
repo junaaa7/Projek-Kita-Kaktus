@@ -97,11 +97,13 @@ if (table_exists($koneksi, 'pesanan')) {
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" style="gap:8px; text-decoration:none;">
                 <div class="sidebar-brand-icon">
-                    <img src="../../assets/icon/logo 1.png" alt="Logo Kita Kaktus" style="width:45px; height:45px; object-fit:contain;">
+                    <img src="../../assets/icon/logo 1.png" alt="Logo Kita Kaktus" style="width:40px; height:40px; object-fit:contain;">
                 </div>
-                <div class="sidebar-brand-text mx-3">KITA KAKTUS</div>
+                <div class="sidebar-brand-text" style="margin-left:5px; font-weight:600; color:white;">
+                    KITA KAKTUS
+                </div>
             </a>
 
             <!-- Divider -->
