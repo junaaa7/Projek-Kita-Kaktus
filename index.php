@@ -113,7 +113,7 @@
                         </div>
                       </div>
                       <div class="col-md-4 col-3">
-                      <img src="./assets/img/kaktus(3).png" class="img-fluid" alt="Responsive image">
+                      <img src="./assets/img/kaktus(6).png" class="img-fluid" alt="Responsive image">
                       </div>
                     </div>
                   </div>
