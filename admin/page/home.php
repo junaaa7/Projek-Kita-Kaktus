@@ -116,13 +116,13 @@ if (table_exists($koneksi, 'pesanan')) {
                     <span>Dashboard</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="produk.php">
+                <a class="nav-link" href="produk.php" style="color: black;">
                 <i class="fas fa-code"></i>
                     <span>Produk</span></a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="../logout.php">
+                <a class="nav-link" href="../logout.php" style="color: black;">
                 <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
