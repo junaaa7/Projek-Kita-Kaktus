@@ -94,7 +94,7 @@ if (table_exists($koneksi, 'pesanan')) {
     <div id="wrapper" style="margin-bottom:-25px;">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background: linear-gradient(180deg, #1B4332 0%, #081C15 100%);">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" style="gap:8px; text-decoration:none;">
