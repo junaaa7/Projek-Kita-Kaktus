@@ -99,7 +99,7 @@ if (table_exists($koneksi, 'pesanan')) {
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon">
-                    <img src="../assets/icon/logo 1.png" alt="Logo Kita Kaktus" style="width:45px; height:45px; object-fit:contain;">
+                    <img src="../../assets/icon/logo 1.png" alt="Logo Kita Kaktus" style="width:45px; height:45px; object-fit:contain;">
                 </div>
                 <div class="sidebar-brand-text mx-3">KITA KAKTUS</div>
             </a>
