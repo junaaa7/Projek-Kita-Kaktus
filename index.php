@@ -109,11 +109,11 @@
                     <div class="row">
                       <div class="col-md-8 col-9">
                         <div class="card-body">
-                          Sukulen
+                          Euphorbia
                         </div>
                       </div>
                       <div class="col-md-4 col-3">
-                      <img src="./assets/img/kaktus(2).png" class="img-fluid" alt="Responsive image">
+                      <img src="./assets/img/kaktus(3).png" class="img-fluid" alt="Responsive image">
                       </div>
                     </div>
                   </div>
@@ -204,7 +204,7 @@ Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2024. Fokus pada 
             <div class="card">
               <div class="card-body text-center">
                 <a href="https://www.tiktok.com/@kitakaktus" target="_blank">
-                  <img src="./assets/icon/logo-tiktok.png" width="80px" class="img-fluid" alt="TikTok Logo">
+                  <img src="./assets/icon/tiktok.png" width="80px" class="img-fluid" alt="TikTok Logo">
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2024. Fokus pada 
             <div class="card">
               <div class="card-body">
                 <a href="https://shopee.co.id/kita_kaktus" target="_blank">
-              <img src="./assets/icon/logo-shopee.png" width="80px" class="img-fluid" alt="Shopee Logo">
+              <img src="./assets/icon/shopee.png" width="80px" class="img-fluid" alt="Shopee Logo">
               </div>
             </div>
           </div>
@@ -220,7 +220,7 @@ Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2024. Fokus pada 
             <div class="card">
               <div class="card-body">
                 <a href="https://wa.me/6287871797367" target="_blank">
-              <img src="./assets/icon/logo-wa.png" width="80px" class="img-fluid" alt="WhatApps Logo">
+              <img src="./assets/icon/whatsapp.png" width="80px" class="img-fluid" alt="Whatsapp Logo">
               </div>
             </div>
           </div>
