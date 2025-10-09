@@ -6,6 +6,7 @@ if(!isset($_SESSION['username'])) {
 }
 require '../../db/koneksi.php';
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+
 // ====== Safety queries: hanya jalankan jika tabel ada ======
 function table_exists($koneksi, $table) {
     $res = @mysqli_query($koneksi, "SHOW TABLES LIKE '".mysqli_real_escape_string($koneksi,$table)."'");
@@ -35,7 +36,6 @@ function safe_sum($koneksi, $table, $col, $where='1') {
 // ambil statistik (aman)
 $dataProduk     = safe_count($koneksi, 'produk');
 $dataPesanan    = safe_count($koneksi, 'pesanan');
-$dataUser       = safe_count($koneksi, 'users');
 $dataPendapatan = safe_sum($koneksi, 'pesanan', 'total_harga', "status='selesai'");
 
 // ambil data chart (jika tabel pesanan ada)
@@ -197,13 +197,6 @@ if (table_exists($koneksi, 'pesanan')) {
 <div class="col-xl-3 col-md-6">
     <div class="card bg-success text-white mb-4">
         <div class="card-body">Pesanan: <?= $dataPesanan ?></div>
-    </div>
-</div>
-
-<!-- Card User -->
-<div class="col-xl-3 col-md-6">
-    <div class="card bg-warning text-white mb-4">
-        <div class="card-body">User: <?= $dataUser ?></div>
     </div>
 </div>
 
