@@ -44,16 +44,17 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background: linear-gradient(180deg, #008000 0%, #32CD32 100%);">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background: linear-gradient(180deg, #2C3E50 0%, #1F1C2C 100%);">
 
             <!-- Sidebar - Brand -->
-           <a class="sidebar-brand d-flex align-items-center justify-content-center">
-    <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-tree" style="color:green; font-size:2rem;"></i>
-
-    </div>
-    <div class="sidebar-brand-text mx-3">KITA KAKTUS</div>
-</a>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" style="gap:8px; text-decoration:none;">
+                <div class="sidebar-brand-icon">
+                    <img src="../../assets/icon/logo 1.png" alt="Logo Kita Kaktus" style="width:40px; height:40px; object-fit:contain;">
+                </div>
+                <div class="sidebar-brand-text" style="margin-left:5px; font-weight:850; color:ghostwhite;">
+                    KITA KAKTUS
+                </div>
+            </a>
 
 
 
@@ -62,17 +63,17 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="home.php">
+                <a class="nav-link" href="home.php" style="color: ghostwhite;">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="produk.php">
+                <a class="nav-link" href="produk.php" style="color: ghostwhite;">
                 <i class="fas fa-code"></i>
                     <span>Produk</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../logout.php">
+                <a class="nav-link" href="../logout.php" style="color: ghostwhite;">
                 <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
