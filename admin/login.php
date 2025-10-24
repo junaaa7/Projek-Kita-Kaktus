@@ -152,7 +152,7 @@ if (isset($_SESSION['username'])) {
         <span class="tag-admin"><i class="fas fa-shield-alt"></i> Admin</span>
       </div>
 
-      <h2 class="welcome">Welcome Back, Admin!</h2>
+      <h2 class="welcome">Welcome, Admin!</h2>
 
       <!-- Form -->
       <form action="ceklogin.php" method="post" novalidate>
