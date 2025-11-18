@@ -187,13 +187,25 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                                             <td><?php echo $data['harga']; ?></td>
                                             <td><?php echo $data['wa']; ?></td>
                                             <td>
-                                                <a href="./include/hapus-produk.php?id=<?php echo $data['id'];?>" class="btn btn-danger btn-icon-split btn-del">
-                                                    <span class="icon text-white-50">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                    <span class="text">Hapus</span>
-                                                </a>
-                                            </td>
+                                                <td>
+                                                    <!-- Tombol Edit -->
+                                                    <a href="./include/edit-produk.php?id=<?= $data['id']; ?>" 
+                                                    class="btn btn-warning btn-icon-split mb-1">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-edit"></i>
+                                                        </span>
+                                                        <span class="text">Edit</span>
+                                                    </a>
+
+                                                    <!-- Tombol Hapus -->
+                                                    <a href="./include/hapus-produk.php?id=<?= $data['id']; ?>" 
+                                                    class="btn btn-danger btn-icon-split btn-del mb-1">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-trash"></i>
+                                                        </span>
+                                                        <span class="text">Hapus</span>
+                                                    </a>
+                                                </td>
                                         </tr>
                                             <?php 
                                                 ini_set("display_errors","Off");
