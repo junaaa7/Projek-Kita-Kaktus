@@ -45,22 +45,17 @@ if (table_exists($koneksi, 'pesanan')) {
         SELECT MONTH(tanggal) as bulan, SUM(total_harga) as total
         FROM pesanan
         WHERE status='selesai'
+          AND YEAR(tanggal) = YEAR(CURDATE())
         GROUP BY MONTH(tanggal)
     ");
     if ($qChart) {
         while ($r = mysqli_fetch_assoc($qChart)) {
-            $penjualanBulan[(int)$r['bulan']] = (float)$r['total'];
+            $bulan = (int)$r['bulan'];
+            $penjualanBulan[$bulan] = (float)$r['total'];
         }
     }
-    $qChart = mysqli_query($koneksi, "
-    SELECT MONTH(tanggal) as bulan, SUM(total_harga) as total
-    FROM pesanan
-    WHERE status='selesai' 
-      AND YEAR(tanggal) = YEAR(CURDATE())
-    GROUP BY MONTH(tanggal)
-");
-
 }
+
 ?>
 
 <!DOCTYPE html>
