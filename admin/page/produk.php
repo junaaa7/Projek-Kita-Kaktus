@@ -67,11 +67,19 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="produk.php" style="color: ghostwhite;">
                 <i class="fas fa-code"></i>
                     <span>Produk</span></a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="pesanan.php" style="color: ghostwhite;">
+                <i class="fas fa-shopping-cart"></i>
+                    <span>Pesanan</span></a>
+            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="../logout.php" style="color: ghostwhite;">
                 <i class="fas fa-sign-out-alt"></i>
