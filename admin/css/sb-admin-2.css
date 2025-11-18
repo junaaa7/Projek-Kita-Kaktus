@@ -10302,7 +10302,6 @@ a:focus {
 }
 
 .sidebar .nav-item .nav-link span {
-  color: black !important;
   font-size: 0.65rem;
   display: block;
 }

@@ -174,25 +174,71 @@ Kita Kaktus adalah brand tanaman hias yang berdiri sejak tahun 2024. Fokus pada 
         </div>
         <div class="row text-center">
                       <?php
-                          require './db/koneksi.php';
-                          $sql = mysqli_query($koneksi, "SELECT * FROM produk");
-                          while ($data = mysqli_fetch_assoc($sql)) {
-                      ?>
-          <div class="col-md-6 col-lg-3 mt-3">
-            <div class="card">
-              <img class="card-img-top" src="./assets/produk/<?php echo $data['gambar']; ?>" alt="<?php echo $data['gambar']; ?>">
-              <div class="card-body">
-                <h4 class="card-title "><?php echo $data['nama']; ?></h4>
-                <h6 class="pb-3"><?php echo $data['harga']; ?></h6>
-                <button class="btn btn-primary btn-block btn-custom" data-toggle="modal" data-target="#pesan<?php echo $data['id']; ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Beli</button>
-              </div>
-            </div>
-          </div>
-                      <?php 
-                        include 'proses.php';
-                        ini_set("display_errors","Off");
-                        } 
-                      ?>
+                        require './db/koneksi.php';
+                        $sql = mysqli_query($koneksi, "SELECT * FROM produk");
+                        while ($data = mysqli_fetch_assoc($sql)) {
+                    ?>
+                      <div class="col-md-6 col-lg-3 mt-3">
+                        <div class="card">
+                          <img class="card-img-top" src="./assets/produk/<?php echo $data['gambar']; ?>" alt="<?php echo $data['gambar']; ?>">
+                          <div class="card-body">
+                            <h4 class="card-title "><?php echo $data['nama']; ?></h4>
+                            <h6 class="pb-3"><?php echo $data['harga']; ?></h6>
+                            <button class="btn btn-primary btn-block btn-custom" data-toggle="modal" data-target="#pesan<?php echo $data['id']; ?>">
+                              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Beli
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Modal Buat Pesanan untuk produk ini -->
+                      <div class="modal fade bd-example-modal-lg" id="pesan<?php echo $data['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-body pt-5 pb-5">
+                              <form role="form" method="post" action="proses.php">
+                                <!-- penting: kirim id & harga produk -->
+                                <input type="hidden" name="id_produk" value="<?php echo $data['id']; ?>">
+                                <input type="hidden" name="harga_satuan" value="<?php echo $data['harga']; ?>">
+
+                                <h2 class="mb-4">Buat Pesanan</h2>
+                                <div role="form" class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label>Nama Barang</label>
+                                    <input type="text" class="form-control" name="barang" value="<?php echo $data['nama']; ?>" readonly>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label>Whatsapp Penjual</label>
+                                    <input type="text" class="form-control" name="wa" value="<?php echo $data['wa']; ?>" readonly>
+                                  </div>
+                                </div>
+
+                                <label>Pesanan :</label>
+                                <div role="form" class="form-row">  
+                                  <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" name="pembeli" placeholder="Name" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" name="alamat" placeholder="alamat" required>
+                                </div>
+                                <div class="form-group">
+                                  <textarea class="form-control" name="pesan" style="white-space: pre-line;" placeholder="pesan untuk penjual ..." rows="2" required></textarea>
+                                </div>
+
+                                <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                              </form>                    
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <?php 
+                        } // end while
+                    ?>
         </div>
       </div>
     </section>

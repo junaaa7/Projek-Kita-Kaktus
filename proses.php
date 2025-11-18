@@ -1,50 +1,53 @@
-<!-- Modal contact -->
-<div class="modal fade bd-example-modal-lg" id="pesan<?php echo $data['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                      <div class="modal-content">
-                        <div class="modal-body pt-5 pb-5">
-                          <form role="form" method="post">
-                            <h2 class="mb-4">Buat Pesanan</h2>
-                            <div role="form" class="form-row">
-                              <div class="form-group col-md-6">
-                                <label for="barang">Nama Barang</label>
-                                <input type="text" class="form-control" name="barang" id="nama"value="<?php echo $data['nama']; ?>" readonly>
-                              </div>
-                              <div class="form-group col-md-6">
-                                <label for="wa">Whatsapp Penjual</label>
-                                <input type="text" class="form-control" name="wa" id="email" value="<?php echo $data['wa']; ?>" readonly>
-                              </div>
-                            </div>
-                            <label>Pesanan :</label>
-                            <div role="form" class="form-row">  
-                              <div class="form-group col-md-6">
-                                <input type="text" class="form-control" name="pembeli" id="nama" placeholder="Name" required>
-                              </div>
-                              <div class="form-group col-md-6">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="alamat" id="subjek" placeholder="alamat" required>
-                            </div>
-                            <div class="form-group">
-                              <pre><textarea class="form-control" name="pesan" id="pesan" style="white-space: pre-line;" placeholder="pesan untuk penjual ..." row="1" required></textarea></pre>
-                            </div>
-                            <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
-                            <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                          </form>                    
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <?php
-                  if(isset($_POST['kirim'])) {
-                    $nomor=$_POST['wa'];
-                    $barang=$_POST['barang'];
-                    $pembeli=$_POST['pembeli'];
-                    $email=$_POST['email'];
-                    $alamat=$_POST['alamat'];
-                    $pesan=$_POST['pesan'];                    
-                    echo "<script>window.location.href = 'https://api.whatsapp.com/send?phone=$nomor&text=saya ingin membeli%0A$barang%0A%0Acatatan pesanan:%0ANama: $pembeli%0AEmail: $email%0AAlamat: $alamat%0Acatatan untuk penjual:%0A$pesan';</script>";
-                  }
-                  ?>
+<?php
+// proses.php
+require './db/koneksi.php'; // sesuaikan jika foldernya beda
+
+if (isset($_POST['kirim'])) {
+
+    // ambil data dari form (pakai nama field yang sama dengan di index.php)
+    $id_produk    = $_POST['id_produk'];                      // hidden input dari modal
+    $nama_produk  = $_POST['barang'];                         // Nama Barang
+    $nomor        = preg_replace('/[^0-9]/', '', $_POST['wa']); // WA penjual, dibersihkan jadi angka saja
+
+    $pembeli      = $_POST['pembeli'];
+    $email        = $_POST['email'];
+    $alamat       = $_POST['alamat'];
+    $catatan      = $_POST['pesan'];
+
+    // di web tidak ada pilihan jumlah → anggap 1
+    $jumlah       = 1;
+
+    // harga bisa jadi ada "Rp" atau titik, jadi dibersihkan dulu
+    $harga_satuan = (int)preg_replace('/\D/', '', $_POST['harga_satuan']);
+    $total_harga  = $jumlah * $harga_satuan;
+
+    $tanggal      = date('Y-m-d');
+    $status       = 'baru'; // nanti di admin kamu ubah ke 'selesai' / 'batal'
+
+    // SIMPAN KE TABEL PESANAN
+    $sql = "INSERT INTO pesanan
+            (id_produk, nama_produk, nama_pemesan, email, alamat, catatan,
+             jumlah, harga_satuan, total_harga, tanggal, status)
+            VALUES
+            ('$id_produk', '$nama_produk', '$pembeli', '$email', '$alamat', '$catatan',
+             '$jumlah', '$harga_satuan', '$total_harga', '$tanggal', '$status')";
+
+    mysqli_query($koneksi, $sql);
+
+    // SETELAH TERSIMPAN → LANJUTKAN KE WHATSAPP (struktur pesan mirip kode lama kamu)
+    $url = "https://api.whatsapp.com/send?phone=$nomor&text="
+         . "saya ingin membeli%0A$nama_produk%0A%0A"
+         . "catatan pesanan:%0A"
+         . "Nama: $pembeli%0A"
+         . "Email: $email%0A"
+         . "Alamat: $alamat%0A"
+         . "catatan untuk penjual:%0A$catatan";
+
+    echo "<script>window.location.href = '$url';</script>";
+    exit;
+
+} else {
+    // kalau akses langsung tanpa submit form, balikin ke beranda
+    header("Location: index.php");
+    exit;
+}
