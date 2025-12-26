@@ -166,7 +166,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>no</th>
+                                            <th>No</th>
                                             <th>Foto</th>
                                             <th>Nama</th>
                                             <th>Harga</th>
